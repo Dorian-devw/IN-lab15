@@ -5,8 +5,11 @@ dataset/*.csv
 *.zip
 *.tar.gz
 *.log
+generate_final_report.py
 
-# Archivos temporales y de bloqueo de Microsoft Word
+# Documentos académicos y de entrega (se entregan vía plataforma, no en GitHub)
+*.docx
+*.pdf
 ~$*.docx
 *.tmp
 

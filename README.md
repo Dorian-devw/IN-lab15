@@ -96,10 +96,7 @@ IN-sem15/
 ├── docker-compose.yml           # Orquestación del contenedor y mapeo de puertos
 ├── entrypoint.sh                # Script de inicio del contenedor (SSH y soporte)
 ├── run_pipeline.sh              # Script maestro automatizado de ejecución de punta a punta
-├── generate_final_report.py     # Generador automatizado del informe Word y PDF
-├── in-lab15-fso-resuelto.docx   # Documento Word oficial con desarrollo exhaustivo
-├── in-lab15-fso-resuelto.pdf    # Documento PDF final listo para entrega
-├── .gitignore                   # Exclusión de binarios y datos pesados
+├── .gitignore                   # Exclusión de binarios, datos pesados y documentos
 └── README.md                    # Documentación técnica completa del repositorio
 ```
 
