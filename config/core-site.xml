@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<configuration>
+    <!-- 1. Sistema de archivos por defecto HDFS -->
+    <property>
+        <name>fs.defaultFS</name>
+        <value>hdfs://localhost:9000</value>
+        <description>URI del NameNode maestro para operaciones HDFS</description>
+    </property>
+
+    <!-- 2. Directorio temporal base de Hadoop -->
+    <property>
+        <name>hadoop.tmp.dir</name>
+        <value>/opt/hadoop/data/tmp</value>
+        <description>Directorio temporal para almacenamiento de procesos de Hadoop</description>
+    </property>
+
+    <!-- 3. Optimización de I/O de archivos (128 KB) -->
+    <property>
+        <name>io.file.buffer.size</name>
+        <value>131072</value>
+        <description>Tamaño del búfer de lectura/escritura para optimizar rendimiento de E/S</description>
+    </property>
+</configuration>

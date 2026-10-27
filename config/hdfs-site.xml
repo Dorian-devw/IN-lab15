@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<configuration>
+    <!-- 1. Factor de replicación de bloques -->
+    <property>
+        <name>dfs.replication</name>
+        <value>1</value>
+        <description>Número de réplicas por bloque. Configurado en 1 para entorno pseudo-distribuido</description>
+    </property>
+
+    <!-- 2. Tamaño óptimo de bloque (128 MB) -->
+    <property>
+        <name>dfs.blocksize</name>
+        <value>134217728</value>
+        <description>128MB por bloque para minimizar la sobrecarga de metadatos en la memoria del NameNode</description>
+    </property>
+
+    <!-- 3. Rutas de persistencia de metadatos y bloques de datos -->
+    <property>
+        <name>dfs.namenode.name.dir</name>
+        <value>file:///opt/hadoop/data/nameNode</value>
+        <description>Ubicación física donde el NameNode almacena la imagen fsimage y edits</description>
+    </property>
+    <property>
+        <name>dfs.datanode.data.dir</name>
+        <value>file:///opt/hadoop/data/dataNode</value>
+        <description>Ubicación física donde el DataNode almacena los bloques HDFS</description>
+    </property>
+
+    <!-- 4. Interfaces Web accesibles desde el host -->
+    <property>
+        <name>dfs.namenode.http-address</name>
+        <value>0.0.0.0:9870</value>
+        <description>Acceso a la interfaz web del NameNode</description>
+    </property>
+    <property>
+        <name>dfs.datanode.http-address</name>
+        <value>0.0.0.0:9864</value>
+        <description>Acceso a la interfaz web del DataNode</description>
+    </property>
+
+    <!-- 5. Permisos para entorno académico -->
+    <property>
+        <name>dfs.permissions.enabled</name>
+        <value>false</value>
+        <description>Desactivación de comprobación estricta de permisos para entorno de pruebas</description>
+    </property>
+</configuration>

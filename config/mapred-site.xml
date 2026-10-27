@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<configuration>
+    <!-- 1. Framework de ejecución MapReduce delegado a YARN -->
+    <property>
+        <name>mapreduce.framework.name</name>
+        <value>yarn</value>
+        <description>Delega la planificación y gestión de tareas MapReduce a YARN</description>
+    </property>
+
+    <!-- 2. Optimización de memoria para tareas Map y Reduce -->
+    <property>
+        <name>mapreduce.map.memory.mb</name>
+        <value>1024</value>
+        <description>Límite de memoria para cada contenedor Mapper (1 GB)</description>
+    </property>
+    <property>
+        <name>mapreduce.reduce.memory.mb</name>
+        <value>1024</value>
+        <description>Límite de memoria para cada contenedor Reducer (1 GB)</description>
+    </property>
+    <property>
+        <name>mapreduce.map.java.opts</name>
+        <value>-Xmx800m</value>
+        <description>Parámetro heap JVM para procesos Map</description>
+    </property>
+    <property>
+        <name>mapreduce.reduce.java.opts</name>
+        <value>-Xmx800m</value>
+        <description>Parámetro heap JVM para procesos Reduce</description>
+    </property>
+
+    <!-- 3. Classpath de Hadoop para resolución de librerías en YARN -->
+    <property>
+        <name>mapreduce.application.classpath</name>
+        <value>$HADOOP_HOME/share/hadoop/mapreduce/*:$HADOOP_HOME/share/hadoop/mapreduce/lib/*:$HADOOP_HOME/share/hadoop/common/*:$HADOOP_HOME/share/hadoop/common/lib/*:$HADOOP_HOME/share/hadoop/hdfs/*:$HADOOP_HOME/share/hadoop/hdfs/lib/*:$HADOOP_HOME/share/hadoop/yarn/*:$HADOOP_HOME/share/hadoop/yarn/lib/*</value>
+    </property>
+</configuration>

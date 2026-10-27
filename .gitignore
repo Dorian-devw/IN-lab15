@@ -1,0 +1,51 @@
+# Archivos de datos generados pesados (se generan con python dataset/generate_energy_dataset.py)
+dataset/*.csv
+
+# Archivos de empaquetado y temporales
+*.zip
+*.tar.gz
+*.log
+
+# Archivos temporales y de bloqueo de Microsoft Word
+~$*.docx
+*.tmp
+
+# Archivos de Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Entornos virtuales
+venv/
+env/
+.venv/
+ENV/
+
+# Entornos de desarrollo / IDEs
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Archivos del sistema operativo
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.DS_Store
